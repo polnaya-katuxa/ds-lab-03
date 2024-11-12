@@ -50,5 +50,5 @@ func processError(c echo.Context, err error, comment string) error {
 	internalError = models.InternalError{
 		Message: fmt.Sprintf("%s: %s", comment, err.Error()),
 	}
-	return c.JSON(http.StatusInternalServerError, internalError)
+	return c.JSON(http.StatusServiceUnavailable, internalError)
 }
