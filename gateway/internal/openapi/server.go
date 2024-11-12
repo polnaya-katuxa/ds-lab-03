@@ -165,7 +165,7 @@ func (s *Server) BookCar(c echo.Context, params openapi.BookCarParams) error {
 				return processError(c, revertErr, "revert book")
 			}
 		}
-		return processError(c, err, "create payment")
+		return processAndHideError(c, err, "Payment Service unavailable")
 	}
 
 	rental, err := s.rental.Create(c.Request().Context(), params.XUserName, rental_service.CreateRentalRequest{
