@@ -25,3 +25,7 @@ config:
     cars_service: ""
     payment_service: ""
     rental_service: ""
+  kafka:
+    broker: ""
+    cars_retry_topic: ""
+    payment_retry_topic: ""

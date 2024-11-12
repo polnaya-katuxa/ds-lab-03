@@ -16,11 +16,11 @@ config:
   port: 80
   logLevel: info
   postgres:
-    host: 127.0.0.1
-    port: 5435
-    user: program
-    password: test
-    db: postgres
+    host: ""
+    port: 0
+    user: ""
+    password: ""
+    db: ""
   services:
     cars_service: http://cars-service
     payment_service: http://payment-service
